@@ -13,11 +13,23 @@ GumGum Project:
 
 - .drone.yml : Drone CI pipeline integration 
 
-- Dockerfile : Docker setup for single key/value server 
+- Dockerfile : Docker setup for single key/value server #install docker
+           
+           $docker build -t caching-service . (To build/install redis enviornmnet, installs requirments and starts the server on port 5000)
+     (dot indicates Dockerfile under root directory of the project)
+           
+           $docker exec -it e12f2a2b193 bash (e12f2a2b193 -> Image ID, caching-service -> docker image/repo name)
+  
+  Commands to push to dockerhub:
+  
+      $Docker login #Enter dockerhub username and password
+      $docker tag e12f2a2b193 ramesh0476/redis_cache_service:1.1
+      $docker push ramesh0476/redis_cache_service:1.1
 
 
 - Procfile : heroku app specifications 
- <process type>: <command>
+
+       <process type>: <command>
 
 - README.md: Documentation 
 
@@ -37,7 +49,7 @@ GumGum Project:
       $flask==1.0.2
       $redis==3.0.1
 
-- Server.py: caching service with single request 
+- Server.py: caching service with single request #Note: required redis server to install and start the service
     
       COMMAND: $python Server.py 
 
