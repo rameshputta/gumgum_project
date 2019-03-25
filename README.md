@@ -24,26 +24,29 @@ GumGum Project:
 - Heroku: Automation script for Heroku creation/deployment using bash
   Command : $heroku gumgum-caching-service (arg $1 name of the heroku repo/project)
 Manual heroku deplyment process:
-   $heroku login #Login with heroku username and password and integrate with Auth CLI
-   $git init
-   $heroku git:remote -a gumgum-caching-service
-   $git add .
-   $git commit -am "heroku deploy"
-   $git push heroku master
 
-- Requirments.txt: Dependencies 
-   $flask==1.0.2
-   $redis==3.0.1
+    $heroku login #Login with heroku username and password and integrate with Auth CLI
+    $git init
+    $heroku git:remote -a gumgum-caching-service
+    $git add .
+    $git commit -am "heroku deploy"
+    $git push heroku master
+
+- Requirments.txt: Dependencies
+
+      $flask==1.0.2
+      $redis==3.0.1
 
 - Server.py: caching service with single request 
-    COMMAND: $python Server.py 
+    
+      COMMAND: $python Server.py 
 
        POST: curl --request POST --header "Content-Type: application/json" --data '{"value":"Hello ramesh"}' http://localhost:5000/set/test 
        GET: curl http://localhost:5000/get/test
 
 - Multikey_server.py: caching service with multiple request 
 
-   COMMAND: $python mutiple_server.py
+       COMMAND: $python mutiple_server.py
 
    Multiple values post: 
 
