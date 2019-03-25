@@ -1,0 +1,10 @@
+pipeline:
+  build:
+    image: ramesh0476/redis_cache_service:1.1
+    commands:
+      - sleep 2
+      - pip install -r requirements.txt
+      - python ./server.py 
+    when:
+      branch: [ master ]
+      event: [push, pull_request] # trigger step on push and pull events
