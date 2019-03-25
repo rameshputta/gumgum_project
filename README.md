@@ -23,14 +23,14 @@ GumGum Project:
 
 - Heroku: Automation script for Heroku creation/deployment using bash
   Command : $heroku gumgum-caching-service (arg $1 name of the heroku repo/project)
-Manual heroku deplyment process:
-
-    $heroku login #Login with heroku username and password and integrate with Auth CLI
-    $git init
-    $heroku git:remote -a gumgum-caching-service
-    $git add .
-    $git commit -am "heroku deploy"
-    $git push heroku master
+     Manual heroku deplyment process:
+       
+        $heroku login #Login with heroku username and password and integrate with Auth CLI
+        $git init
+        $heroku git:remote -a gumgum-caching-service
+        $git add .
+        $git commit -am "heroku deploy"
+        $git push heroku master
 
 - Requirments.txt: Dependencies
 
