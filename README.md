@@ -13,7 +13,7 @@ GumGum Project:
 
 - .drone.yml : Drone CI pipeline integration 
 
-- Dockerfile : Docker setup for single key/value server #install docker
+- Dockerfile : Docker setup for single key/value request #install docker dependency
            
            $docker build -t caching-service . (To build/install redis enviornmnet, installs requirments and starts the server on port 5000)
      (dot indicates Dockerfile under root directory of the project)
